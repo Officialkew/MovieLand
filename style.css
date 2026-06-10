@@ -67,7 +67,7 @@ body {
 
 /* HERO */
 .hero {
-  background-image: url('/assets/krists-luhaers-AtPWnYNDJnM-unsplash.jpg');
+  background-image: url('./assets/krists-luhaers-AtPWnYNDJnM-unsplash.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
