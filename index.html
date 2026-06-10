@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Browse our Movies</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <a href="#" class="logo">
+          <img
+            src="/assets/logo.webp"
+            alt="Movie Land logo"
+            width="140"
+            height="100"
+          />
+          Movie Land
+        </a>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Find your movie</a></li>
+          <li><button class="btn-contact">CONTACT</button></li>
+        </ul>
+      </nav>
+
+      <div class="hero-inner">
+        <h1>Browse our movies</h1>
+
+        <div class="search-wrap">
+          <div class="search" role="search">
+            <input
+              type="text"
+              placeholder="Search by Make, Model or Keyword"
+              aria-label="Search movies"
+              id="searchInput"
+            />
+            <button ONCLICK="searchMovies()" aria-label="Search">
+              <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="5"
+                  stroke="white"
+                  stroke-width="2"
+                ></circle>
+                <path
+                  d="M21 21l-4.35-4.35"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="results">
+        <div class="left">
+          <h2>Search results:</h2>
+          <p class="muted">Showing cars that match your filters</p>
+          <div class="loader">
+            <h2 style="color: var(--accent)">Loading movies</h2>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+
+        <aside class="price">
+          <div class="label">
+            Price range:
+            <span class="accent"> 1990's to 2026</span>
+          </div>
+          <div class="range-wrap">
+            <input
+              type="range"
+              id="yearSlider"
+              min="1900"
+              max="2026"
+              value="2026"
+              step="1"
+            />
+            <div class="range-values">
+              <span>1990</span>
+              <span>2026</span>
+            </div>
+            <p>Value: <span id="selectedYear"></span></p>
+          </div>
+        </aside>
+      </section>
+      <section ID="MoviesGrid" class="content__shows"></section>
+    </main>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <img
+              src="/assets/logo.webp"
+              alt="Movie Land logo"
+              width="140"
+              height="110"
+            />
+            Movie Land
+          </div>
+          <p class="footer-text">Find the right movie for you</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Support</a>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+
+        <div class="footer-copy">© 2026 Movie Land. All rights reserved.</div>
+      </div>
+    </footer>
+  </body>
+  <script src="index.js"></script>
+</html>
